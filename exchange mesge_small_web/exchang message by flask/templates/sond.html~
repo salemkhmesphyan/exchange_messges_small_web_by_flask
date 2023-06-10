@@ -1,0 +1,35 @@
+{% extends "tem.html" %}
+{% block content %}
+<link href="static/css/bootstrap.css" rel="stylesheet">
+
+   <center><marquee bgcolor="blur" Behavior="alternate" ALIGN="top"><h3><font size=10>مُدوّنتي</font></h3></marquee><br><br>
+   
+    <div class='jumbotron'>
+     {% for message in get_flashed_messages() %}
+       <h1 class="bg-success">مقاطع صوت</h1>
+       <h1  class="bg-success " class="flash">{{message}}</h1>
+     {% endfor  %}
+    <font size=10><div class="create_form">
+        <form action="{{ url_for('sonad') }}" method="POST">
+           
+           <input name="content2" type="text"  class="form-control input-sm" rows="10" placeholder="اسم مقطع الصوت">
+           <input type="submit" value="بحث" class="btn btn-primary btn-lg" />
+        </form>
+  </div></font>
+<div class="main">
+    {% for post in sd2 %}
+    
+ 		<table width='100%' border='5' cellpadding'5' bgcolor='green'>
+ 		<tr>
+ 		<td>
+ 		 <center><font size=10><a href="{{ url_for('static', filename=post['nm1'])}}">{{post['namedb']}}</a></font></center>
+ 		</td>
+ 		</tr>
+ 		</table>
+    
+    {% endfor %}
+    </div></div></div>
+     
+    </center>
+    <button class="btn-primary btn-lg" onclick="location.href='/';">العودة الى الصفحة الرئيسية</button>
+{% endblock %}

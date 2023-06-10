@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>yy</title>
+</head>
+<body>
+<br><br><br><br>
+<h1>back the main page <a class="logout" href="{{ url_for('login1') }}"><font size=10>back</font></a></h1>
+<h1>username is:{{ff}}</h1>
+<h1>password is:{{tt}}</h1>
+<br>
+
+        <a class="logout" href="{{ url_for('logout') }}"><font size=10>تسجيل الخروج</font></a>
+
+</body>
+</html>
+

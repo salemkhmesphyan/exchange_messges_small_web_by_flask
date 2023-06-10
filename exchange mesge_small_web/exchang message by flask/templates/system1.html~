@@ -1,0 +1,49 @@
+<html>
+<head><title>{{t}}</title></head>
+<body>
+<center><h1>اختر نوع الاستخدام</h1></center><br><br>
+{% for message in get_flashed_messages() %}
+<center><h4 style={"color: red;"}>{{message}}</h4></center>
+{% endfor %}
+<br>
+ <center><form action="{{ url_for('puplic') }}" method="POST">
+ <h1>:دخول عام</h1>
+ <p>ملاحظة :البيانات التي تدخلها هنا المدير لايستطيع رؤيتها</p>
+ <br><button>دخول</button>
+ </form></center>
+ <br><br><br>
+ <center>
+<form>
+<table><caption>دخول خاص</caption>
+<br><br>
+<tr>
+<td><input type=text name="d"/></td>
+<td><label>:اسم المستخدم</label></td>
+</tr>
+<tr>
+<td><input type=text name="d"/></td>
+<td><label>:كلمة السر</label></td>
+</tr>
+<tr>
+<td><button>تسجيل الدخول</button></td>
+<td><button>انشاء تسجيل دخول جديد</button></td>
+</tr>
+</table>
+</form>  
+ </center>
+ <br><br><br><br>
+ <center>
+ <form action="{{ url_for('mangrloin') }}" method="POST">
+<table><caption>دخول المدير</caption><br><br>
+<tr>
+<td><input type=text name="22"/></td>
+<td><label>:ادخل كلمة السر</label></td>
+</tr>
+<tr><td><button>دخول</button></button></td></tr>
+</table> 
+ 
+ </form>
+ </center>
+<body>
+</html>
+

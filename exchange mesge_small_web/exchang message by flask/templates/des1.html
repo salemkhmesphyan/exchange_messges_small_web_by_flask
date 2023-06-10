@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+   
+<meta charset="UTF-8">
+  <title>programe drdash</title>
+    
+    
+   <meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="static/js/jquery.js"></script>
+		
+    
+   
+   
+   
+ <style type="text/css">
+
+ </style>
+</head>
+<body>
+<h1 style="text-align:center;">WHATSAPP</h1>
+<hr>
+<br>
+ {% for message in get_flashed_messages() %}
+    <div class="flash"> <font size=10>{{ message }}</font> </div>
+    {% endfor %}
+<br>
+<form action="{{ url_for('log2') }}" method='POST'>
+<label>user:</label><input type="text" name="us1" /><label>password:</label><input type="text" name="pass1" /><input type="submit" value="اضافة حساب جديد" />
+</form>
+<hr>
+{% if 'logged_in' not in session %}
+<form action="{{ url_for('log3') }}" method='POST'>
+<label>user:</label><input type="text" name="us2"/><input type="submit" value="دخول" /><br>
+<h1>plese sing first</h1>
+
+</form>
+{% else %}
+ <a class="navbar-form navbar-right"  href="{{ url_for('out') }}"><font size=10>wellcome:{{session['logged_in']}}</font></a>
+ <br><a  href="{{ url_for('logout') }}">تسجيل الخروج</a>
+ <br><a  href="{{ url_for('u1') }}">مراسلة المستخدمين</a>
+{% endif %}
+</body>
+
+</html>

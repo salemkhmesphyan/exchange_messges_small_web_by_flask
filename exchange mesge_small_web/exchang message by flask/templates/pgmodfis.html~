@@ -1,0 +1,46 @@
+{% extends "des1.html" %}
+{% block content %}
+<title> {{t}}</title>
+<br>
+<center><form action="{{url_for('pagemodshow')}}" method="POST">
+<label>enter search:</label><font color="black"><input type="text" name="11" /></font>
+<font color="black"><button>Search</button></font>
+</form></center>
+<br>
+<br>
+<br>
+<center><form action="{{ url_for('pagemodnow')}}" method="POST">
+{% for n in sh2 %}
+<table>
+<tr>
+<td>name well origent:</td><td><font color="black"><input type=text name="22" value={{n['NameWell']}} /></font></td>
+
+<td>number well:</td><td><font color="black"><input type=text name="33" value={{n['ID']}} /></font></td>
+</tr>
+<br>
+<tr>
+<td>name well:</td><td><font color="black"><input type=text name="1" value={{n['NameWell']}} /></font></td>
+</tr>
+<tr>
+<td>Time:</td><td><font color="black"><input type=text value={{n['Time']}} name="2" /></font></td>
+</tr>
+<tr>
+<td>Date:</td><td><font color="black"><input type=text value={{n['Data']}} name="3" /></font></td>
+</tr>
+<tr>
+<td>Reason:</td><td><font color="black"><input type=text value={{n['Reason']}} name="4" /></font></td>
+</tr>
+<tr>
+<td>Remark:</td><td><font color="black"><input type=text value={{n['Remark']}} name="5" /></font></td>
+</tr>
+<tr>
+<td>Job Discripsion:</td><td><font color="black"><textarea name="6" >{{n['JobDiscripsion']}}</textarea></td>
+</tr>
+</table>
+{% endfor %}
+<br>
+<center><font color="black"><button>modfi operations</button></font></center>
+</form>
+</center>
+
+{% endblock %}

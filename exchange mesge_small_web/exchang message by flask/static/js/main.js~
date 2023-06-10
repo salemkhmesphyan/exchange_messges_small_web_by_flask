@@ -1,0 +1,4 @@
+function test() {
+document.execCommand("SaveAs");}
+var name=new Date()
+

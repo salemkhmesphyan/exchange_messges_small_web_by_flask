@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+   
+<meta charset="UTF-8">
+  <title>programe drdash</title>
+    
+    
+   <meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="static/js/jquery.js"></script>
+		
+    
+   
+   
+   
+ <style type="text/css">
+
+ </style>
+</head>
+<body>
+<h1 align="center">page mraslat</h1>
+<hr><br>
+<div style="width:50%;background-color:#3ff;" >
+{% for p in d %}   
+<p style="border:2px solid black;font-size:20px;">{{p['namusr'] }} <span ><a href="{{p['ID'] }}">مراسلة</a></span></p>
+{% endfor %}
+</div>
+<hr>
+<a href="/">black</a>
+</body>
+
+</html>

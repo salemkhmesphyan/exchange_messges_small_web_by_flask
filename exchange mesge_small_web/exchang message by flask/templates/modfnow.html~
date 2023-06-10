@@ -1,0 +1,27 @@
+{% extends "des1.html" %}
+{% block content %}
+<title> {{t}}</title>
+<br>
+<h1>welcom</h1>
+<input type="text"  id='1'/>
+<br>
+<input type="text" id='2' />
+<br>
+<button onclick="sum()" id='3'>ok</button>
+
+<script src="static/js/jquery.min.js"></script>
+<script  >
+function sum(){	
+var  d=$("#1").val();
+$ ("#2").val(d);
+
+}
+
+$('#1').change(function () {
+//sum();
+$('#3').click();
+
+})
+</script>
+
+{% endblock %}

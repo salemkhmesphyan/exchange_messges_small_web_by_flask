@@ -1,0 +1,66 @@
+{% extends "tem.html" %}
+{% block content %}
+
+
+<body onload="sum()" class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.6s">
+
+<!--<script type="text/javascript">
+alert('hisadsd sada')
+</script>-->
+<div class='jumbotron' >
+
+<center><marquee bgcolor="blur" Behavior="alternate" ALIGN="top"><h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.6s"><font size=10>مُدوّنتي</font></h3></marquee></center><br><br>
+    
+      <center> <h4 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.8s"><font size=9 face="KacstPoster" color=blue>------------------------|الصفحة الرئيسية|-----------------------</font></h4><br>
+       
+    <font size=10 color=blue  > <a href="/imsh">-------------------------------الصور-----------------------</a><br>
+    <a href="/vish">-------------------------------الفيديو-----------------------</a><br>
+    <a href="/sound">------------------------------الصوت-----------------------</a></font></center>
+    <br>
+    <br>
+    <br>
+    <center><h1><a href="/added">اضافة ملفات جديدة</a></h1></center>
+<br>
+<br> 
+<footer id="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <!--<p class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
+                       	Copyright &copy; 2084 Company Name</p>-->
+                      
+    <center><marquee bgcolor="blur" DIRECTION="right" ALIGN="top" LOOP="0"><h3 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.7s"><font size=10>الحمداللة الذي بنعمتة تتم الصالحات</font></h3></marquee>
+<center><font color=black><b id="f" class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.6s">...</b><b class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.5s">:الوقت الان</b></font> </center>
+</div>
+</div>
+                </div>
+            </div>
+        </footer> 
+        <div class="footer-sec">
+<div class="container">
+<div class="row">
+<div class="col-md-12 foo-inner">
+Copyright © 2020-2020 - <a style="color:white;">salem khmec bhyan</a>
+</div>
+</div>
+</div>
+</div>
+
+
+<script>
+
+    var i=0;
+    var d=10;
+     
+    function sum(){
+    var g=new Date();	
+   
+    $("#f").html(g.toLocaleString());
+   
+    
+    
+    setTimeout("sum()",1);}
+</script>
+{% endblock %}
+</body> 
+

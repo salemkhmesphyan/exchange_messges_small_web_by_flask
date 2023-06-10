@@ -1,0 +1,77 @@
+{% extends "des1.html" %}
+{% block content %}
+<title> {{t}}</title>
+<center><h4>{{f}}</h4></center>
+ <br>
+ <br>
+<center><form action="{{ url_for('sershowpup') }}" method="POST">
+<label>enter search:</label><font color="black"><input type="text" id="2" name="1" /></font>
+<font color="black"><button id="3">Search</button></font>
+
+</form></center>
+<br><button onclick="sum()">print</button>
+<br>
+
+{% for message in get_flashed_messages() %}
+<center><h3>{{message}}</h3></center>
+{% endfor %}
+<br>
+<div id="sm">
+
+{% for n in sh1 %}
+ <center><table border="3" width="50%" CELLPADDING="5" CELLSPACING="20"><caption><font size="5" >table operation number:{{n['ID']}}</font></caption>
+ <!--<tr><td>{{n['NameWell']}}</td><td>{{n['Time']}}</td><td>{{n['Data']}}</td><td>{{n['Reason']}}</td><td>{{n['Remark']}}</td><td>{{n['JobDiscripsion']}}</td></tr>-->
+ <tr bgcolor="green"><td width=30%><font size="5">Name Partitions</font></td><td><font size="5">discription Partitions</font></td></tr>
+ <tr bgcolor="Steelblue"><td width=30%><font size="3">namewellis</td><td><font size="3">{{n['NameWell']}}</td></tr>
+ <font size="3"><tr bgcolor="Steelblue"><td width=30%>tim</td><td>{{n['Time']}}</td></tr>
+ <tr bgcolor="Steelblue"><td width=30%>dat</td><td>{{n['Data']}}</td></tr>
+<tr bgcolor="Steelblue"><td width=30%>reson</td><td>{{n['Reason']}}</td></tr>
+<tr bgcolor="Steelblue"><td width=30%>remark</td><td>{{n['Remark']}}</td></tr>
+<tr bgcolor="Steelblue"><td width=30%>job</td><td>{{n['JobDiscripsion']}}</td></tr></font>
+ 
+ </table></center>
+ </div>
+ 
+<script  >
+//$('#2').keypress(function () {
+//sum();
+//$('#3').click();
+
+//})
+ function sum() {
+    	
+ 
+    var prtContent = document.getElementById("sm");
+var WinPrint = window.open('', '', 'left=30,top=50,width=800,height=300,toolbar=0,scrollbars=0,status=0'); 
+WinPrint.document.write('<html><head>');
+WinPrint.document.write('<link rel="stylesheet" href="static/css/animate.min.css">');
+WinPrint.document.write('<link rel="stylesheet" href="static/css/bootstrap.min.css">');
+WinPrint.document.write('<link rel="stylesheet" href="static/css/font-awesome.min.css">');
+WinPrint.document.write("<link href='http://fonts.googleapis.com/static/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>");
+WinPrint.document.write('<link rel="stylesheet" href="static/css/templatemo-style.css">');
+WinPrint.document.write("<center>");
+WinPrint.document.write('</head><body onload="sum();close();">');
+WinPrint.document.write(prtContent.innerHTML);
+WinPrint.document.write('</body></html>');
+WinPrint.document.close();
+WinPrint.focus();
+WinPrint.print();
+WinPrint.close();}
+</script>
+ 
+ {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {% endblock %}

@@ -1,0 +1,58 @@
+<html>
+
+
+<head>
+   
+<meta charset="UTF-8">
+    <title>مُدوّنتي</title>
+    
+    
+   <meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="static/css/animate.min.css">
+		<link rel="stylesheet" href="static/css/bootstrap.min.css">
+		<link rel="stylesheet" href="static/css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/static/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="static/css/templatemo-style.css">
+		<script src="static/js/jquery.js"></script>
+		
+    
+   
+   
+   
+   
+  
+    
+   
+</head>
+<body>
+
+  <nav class="navbar navbar-default templatemo-nav" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+					</button>
+					<a href="/" class="navbar-brand">HOME PAGE</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+					<li><a href="/imsh">الصور</a></li>
+						<li><a href="/vish">الفيديو</a></li>
+					<li><a href="/sound">مقاطع الصوت</a></li>
+						<li><a href="/added">اضافة ملفات جديدة</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		{% block content %}
+		{% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+{% extends "des1.html" %}
+{% block content %}
+ <title>{{t}}</title>
+ <br>
+ <br>
+ {% for n in shw %}
+ <center><table border="3" width="50%" CELLPADDING="5" CELLSPACING="20"><caption>table operation number:{{n['ID']}}</caption>
+ <!--<tr><td>{{n['NameWell']}}</td><td>{{n['Time']}}</td><td>{{n['Data']}}</td><td>{{n['Reason']}}</td><td>{{n['Remark']}}</td><td>{{n['JobDiscripsion']}}</td></tr>-->
+ <tr bgcolor="green"><td width=30%><font size="5">Name Partitions</font></td><td><font size="5">discription Partitions</font></td></tr>
+ <tr bgcolor="Steelblue"><td width=30%><font size="3">namewellis</td><td><font size="3">{{n['NameWell']}}</td></tr>
+ <font size="3"><tr bgcolor="Steelblue"><td width=30%>tim</td><td>{{n['Time']}}</td></tr>
+ <tr bgcolor="Steelblue"><td width=30%>dat</td><td>{{n['Data']}}</td></tr>
+<tr bgcolor="Steelblue"><td width=30%>reson</td><td>{{n['Reason']}}</td></tr>
+<tr bgcolor="Steelblue"><td width=30%>remark</td><td>{{n['Remark']}}</td></tr>
+<tr bgcolor="Steelblue"><td width=30%>job</td><td>{{n['JobDiscripsion']}}</td></tr></font>
+ 
+ </table></center>
+ {% endfor %}
+ 
+ 
+ 
+ 
+ {% endblock %}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+   
+<meta charset="UTF-8">
+  <title>programe drdash</title>
+    
+    
+   <meta name="keywords" content="1">
+		<meta name="description" content="1">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="static/css/bootstrap.min.css" rel="stylesheet" />
+<script src="static/js/jquery.min.js" ></script>
+<script src="static/js/bootstrap.min.js"></script>
+<style type="text/css">
+		
+
+#rr{left:900px;position:fixed;padding: 3px;float: right;margin: 3px;border:2px solid #f8f;background-color:#fef;}
+div a:hover{background-color: green;}
+body{background-color: #FFECDD;}
+ </style>
+ 
+</head>
+<body id="bod1" class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.6s">
+{% for p in d1 %} 
+<center><h1 align="center">{{h1}}</h1><span>اخر ظهور{{p[3]}}</span></center>
+{% endfor %}
+<div id="rr" >
+<form action="{{ url_for('u4') }}" method='POST'>
+<input readonly="" type="text" value="{{t}}" name="ii" id="y"/>
+<button  id="l">relod</button></form><a  href="#bod1" ><img src="static/img/up.png" width="35" height="30" alt="up"></a><a  href="/u1" ><img src="static/img/try.png" width="35" height="30" alt="back"></a><a  href="#bod2" ><img src="static/img/down.png" width="35" height="30" alt="down"></a></div>
+<hr>
+
+
+
+
+<table class="table table-bordered">
+{% for p in d %} 
+<tr><td>
+<p id="y1" data-wow-offset="50" data-wow-delay="2s" style="border:1px solid black;font-size:25px;width: 5%;" title="<span>{{p[2]}}</span>" class="popover-show wow bounceIn"
+data-container="body" data-toggle="popover" data-content="<span>{{p[5] }}</span><hr><span>{{p[3]}}<img src='static/img/true.png' width='15' height='15'></span>">
+>>
+</p></td></tr>{% endfor %}
+</table>
+
+<form action="{{ url_for('u3') }}" method='POST' style="position:fixed;left:600px;top:200px;border:1px solid green;width:40%;background-color:#fef;">
+
+<input type="text" readonly=""  name="s2" value="{{h1}}" id="p"  />
+<label  ><<ارسال الى</label>
+<textarea id="s1" name="s1"></textarea>
+<div style="position:fixed;left:600px;top:300px;border:1px solid green;background-color:#fef;">
+<span>ارسال صورة</span>
+<input type="file" name="data1" id="o1" />
+</div>
+<input type="submit" value="ارسال" />
+</form>
+
+<div id="bod2"></div>
+<script >
+$(function () { $(".popover-show").popover({html : true});});
+$(function () { $(".popover-show").popover("show");});
+$(function () { $(".popover-show").popover({selector : true});});
+$("#y1").show();
+// r1.onmouseover=cc;
+ //function my() {
+ //	parent.location.reload();
+ //}
+// var uu=$("#p").val();
+ //$("#l").hover(function () {
+ 	//$("#y").val(uu);
+ //});
+ $("#o1").change(function () {
+ var u=$("#o1").val().substr(12,90);
+ $("#s1").val("<img src='static/img/"+u+"' width='20' height='20'>");
+ });
+ </script>
+</body>
+</html>
+
+
